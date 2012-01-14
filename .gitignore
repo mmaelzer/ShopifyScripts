@@ -1,0 +1,16 @@
+*.cache
+*.exe*
+
+# resharper files
+*ReSharper*
+
+# visual studio solution user options
+*.suo
+*.user
+
+# binaries
+*.dll
+*.pdb
+
+bin/
+obj/
