@@ -2,16 +2,16 @@
 
 $(document).ready(function() {
     
-    var linkItems = ["Manufacturer", "Collection", "Designer", "Type", "Color Category", "Thread Line", "Author", "Creator"];
+    var singleItems = ["Manufacturer", "Collection", "Designer", "Type", "Color Category", "Thread Line", "Author", "Creator"];
 	var multiItems = ["Use" , "Pattern Types"];
     
     $("div#details > ul > li").each(function(index) {
         var thisLine = $(this).text();
-		for (i in linkItems) {
-			if (thisLine.indexOf(linkItems[i] + ':') != -1) {
-				var val = thisLine.replace(linkItems[i] + ": ", "");
+		for (i in singleItems) {
+			if (thisLine.indexOf(singleItems[i] + ':') != -1) {
+				var val = thisLine.replace(singleItems[i] + ": ", "");
 				var url = sanitize(val);
-				$(this).html(linkItems[i] + ': ' + '<a href="http://www.YOURWEBSITE.com/collections/' + replaceAll(url, " ", "-") + '">' + val + '</a>');
+				$(this).html(singleItems[i] + ': ' + '<a href="http://www.YOURWEBSITE.com/collections/' + replaceAll(url, " ", "-") + '">' + val + '</a>');
 			}
 		}
 		for (j in multiItems) {

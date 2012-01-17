@@ -45,7 +45,7 @@ function getDomesticRate(cartTotal)
 	} else if (cartTotal < 75) {
 		return "$10.00";
 	} else if ( cartTotal < 100) {
-		return "12.50";
+		return "$12.50";
 	} else {
 		return "Free";
 	}
